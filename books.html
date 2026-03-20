@@ -6,30 +6,28 @@
 </head>
 <body>
 
-<div class="box">
-    <h2>Book Management</h2>
+<h2>Available Books</h2>
 
-    <input type="text" placeholder="Book Name"><br>
+<table>
+<tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Author</th>
+</tr>
 
-    <button onclick="addBook()">Add</button>
-    <button onclick="issueBook()">Issue</button>
-    <button onclick="returnBook()">Return</button>
-    <button onclick="deleteBook()">Delete</button>
+<tr>
+    <td>1</td>
+    <td>Java Basics</td>
+    <td>ABC</td>
+</tr>
 
-    <br><br>
-    <button onclick="back()">Back</button>
-</div>
+<tr>
+    <td>2</td>
+    <td>Web Dev</td>
+    <td>XYZ</td>
+</tr>
 
-<script>
-function addBook(){ alert("Book Added"); }
-function issueBook(){ alert("Book Issued"); }
-function returnBook(){ alert("Book Returned"); }
-function deleteBook(){ alert("Book Deleted"); }
-
-function back(){
-    window.location.href="dashboard.html";
-}
-</script>
+</table>
 
 </body>
 </html>
