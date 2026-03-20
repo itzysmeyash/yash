@@ -3,38 +3,24 @@ using namespace std;
 
 class Library {
 public:
-    void addBook() {
-        cout << "Book Added\n";
-    }
-
-    void issueBook() {
-        cout << "Book Issued\n";
-    }
-
-    void returnBook() {
-        cout << "Book Returned\n";
-    }
-
-    void deleteBook() {
-        cout << "Book Deleted\n";
-    }
+    void addBook() { cout<<"Book Added\n"; }
+    void deleteBook() { cout<<"Book Deleted\n"; }
+    void issueBook() { cout<<"Book Issued\n"; }
+    void returnBook() { cout<<"Book Returned\n"; }
 };
 
 int main() {
-    Library lib;
-    int choice;
+    Library l;
+    int ch;
 
-    while(true) {
-        cout << "\n1.Add 2.Issue 3.Return 4.Delete 5.Exit\n";
-        cin >> choice;
+    cout<<"1 Add\n2 Delete\n3 Issue\n4 Return\n";
+    cin>>ch;
 
-        switch(choice) {
-            case 1: lib.addBook(); break;
-            case 2: lib.issueBook(); break;
-            case 3: lib.returnBook(); break;
-            case 4: lib.deleteBook(); break;
-            case 5: return 0;
-            default: cout << "Invalid";
-        }
+    switch(ch) {
+        case 1: l.addBook(); break;
+        case 2: l.deleteBook(); break;
+        case 3: l.issueBook(); break;
+        case 4: l.returnBook(); break;
+        default: cout<<"Invalid";
     }
 }
