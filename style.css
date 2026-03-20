@@ -1,45 +1,34 @@
 body {
+    margin: 0;
     font-family: Arial;
-    background-image: url('library.jpg');
+    background: url('library.jpg') no-repeat center center fixed;
     background-size: cover;
     color: white;
+}
+
+.container {
     text-align: center;
+    margin-top: 100px;
 }
 
 .box {
     background: rgba(0,0,0,0.7);
     padding: 20px;
     width: 300px;
-    margin: 100px auto;
+    margin: auto;
     border-radius: 10px;
 }
 
-input {
-    margin: 10px;
+input, select {
+    width: 90%;
     padding: 10px;
-    width: 80%;
+    margin: 10px;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 10px;
+    margin: 5px;
     background: green;
     color: white;
     border: none;
-}
-
-.menu a {
-    display: block;
-    margin: 10px;
-    color: yellow;
-    text-decoration: none;
-}
-
-table {
-    margin: auto;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid white;
-    padding: 10px;
 }
