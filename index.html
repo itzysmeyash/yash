@@ -8,30 +8,11 @@
 
 <div class="box">
     <h2>Login</h2>
-
     <input type="text" placeholder="Username"><br>
     <input type="password" placeholder="Password"><br>
-
-    <!-- Simple Security -->
-    <label>What is 2 + 2?</label><br>
-    <input type="text" id="captcha"><br>
-
-    <button onclick="login()">Login</button>
-    <p><a href="signup.html">Create Account</a></p>
+    <button onclick="location.href='dashboard.html'">Login</button>
+    <p><a href="signup.html">Sign Up</a></p>
 </div>
-
-<script>
-function login() {
-    let ans = document.getElementById("captcha").value;
-
-    if(ans == "4") {
-        alert("Login Successful");
-        window.location.href = "dashboard.html";
-    } else {
-        alert("Wrong Security Answer");
-    }
-}
-</script>
 
 </body>
 </html>
