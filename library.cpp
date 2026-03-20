@@ -1,29 +1,43 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
-struct Book {
+class Book {
+public:
+    int id;
     string name;
-    string author;
+    bool issued;
+
+    void addBook() {
+        cout << "Enter Book ID: ";
+        cin >> id;
+        cout << "Enter Book Name: ";
+        cin >> name;
+        issued = false;
+    }
+
+    void issueBook() {
+        if (!issued) {
+            issued = true;
+            cout << "Book Issued\n";
+        } else {
+            cout << "Already Issued\n";
+        }
+    }
+
+    void returnBook() {
+        if (issued) {
+            issued = false;
+            cout << "Book Returned\n";
+        } else {
+            cout << "Not Issued\n";
+        }
+    }
 };
 
-vector<Book> library;
-
-void addBook(string name, string author) {
-    library.push_back({name, author});
-    cout << "Book added successfully!\n";
-}
-
-void displayBooks() {
-    for (auto b : library) {
-        cout << b.name << " by " << b.author << endl;
-    }
-}
-
 int main() {
-    addBook("C++ Basics", "Bjarne");
-    addBook("Web Dev", "John");
-    
-    displayBooks();
+    Book b;
+    b.addBook();
+    b.issueBook();
+    b.returnBook();
     return 0;
 }
