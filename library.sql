@@ -4,15 +4,21 @@ USE library;
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50),
-    password VARCHAR(50)
+    password VARCHAR(50),
+    role VARCHAR(10)
 );
 
 CREATE TABLE books (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100),
+    book_id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(100),
+    author VARCHAR(50),
     status VARCHAR(20)
 );
 
-INSERT INTO books(name, status)
-VALUES ('C Programming', 'Available'),
-       ('Data Structures', 'Available');
+CREATE TABLE transactions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    book_id INT,
+    issue_date DATE,
+    return_date DATE
+);
