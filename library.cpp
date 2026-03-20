@@ -1,42 +1,39 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-class Book {
+class Library {
 public:
-    int id;
-    string name;
-    bool issued;
-
-    void addBook() {
-        cout << "Enter Book ID: ";
-        cin >> id;
-        cout << "Enter Book Name: ";
-        cin >> name;
-        issued = false;
-    }
-
     void issueBook() {
-        if (!issued) {
-            issued = true;
-            cout << "Book Issued\n";
-        } else {
-            cout << "Already Issued\n";
-        }
+        cout << "Book Issued Successfully\n";
     }
 
     void returnBook() {
-        if (issued) {
-            issued = false;
-            cout << "Book Returned\n";
-        } else {
-            cout << "Book was not issued\n";
-        }
+        cout << "Book Returned Successfully\n";
+    }
+
+    void addBook() {
+        cout << "Book Added\n";
+    }
+
+    void deleteBook() {
+        cout << "Book Deleted\n";
     }
 };
 
 int main() {
-    Book b;
-    b.addBook();
-    b.issueBook();
-    b.returnBook();
+    Library lib;
+    int choice;
+
+    cout << "1. Issue\n2. Return\n3. Add\n4. Delete\n";
+    cin >> choice;
+
+    switch(choice) {
+        case 1: lib.issueBook(); break;
+        case 2: lib.returnBook(); break;
+        case 3: lib.addBook(); break;
+        case 4: lib.deleteBook(); break;
+        default: cout << "Invalid Choice";
+    }
+
+    return 0;
 }
