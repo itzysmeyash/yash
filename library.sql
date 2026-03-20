@@ -1,19 +1,21 @@
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50),
+    password VARCHAR(50),
+    role VARCHAR(10)
+);
+
 CREATE TABLE books (
-    book_id INT PRIMARY KEY,
-    title VARCHAR(50),
-    author VARCHAR(50),
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(100),
+    author VARCHAR(100),
     status VARCHAR(20)
 );
 
-CREATE TABLE students (
-    student_id INT PRIMARY KEY,
-    name VARCHAR(50)
-);
-
-CREATE TABLE issue (
-    issue_id INT PRIMARY KEY,
+CREATE TABLE transactions (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
     book_id INT,
-    student_id INT,
     issue_date DATE,
     return_date DATE
 );
