@@ -6,19 +6,32 @@
 </head>
 <body>
 
-<div class="container">
-    <h1>Library System</h1>
+<div class="box">
+    <h2>Login</h2>
 
-    <div class="box">
-        <h2>Sign In</h2>
-        <form action="dashboard.html">
-            <input type="text" placeholder="Username" required><br>
-            <input type="password" placeholder="Password" required><br>
-            <button>Login</button>
-        </form>
-        <p><a href="signup.html">Create Account</a></p>
-    </div>
+    <input type="text" placeholder="Username"><br>
+    <input type="password" placeholder="Password"><br>
+
+    <!-- Simple Security -->
+    <label>What is 2 + 2?</label><br>
+    <input type="text" id="captcha"><br>
+
+    <button onclick="login()">Login</button>
+    <p><a href="signup.html">Create Account</a></p>
 </div>
+
+<script>
+function login() {
+    let ans = document.getElementById("captcha").value;
+
+    if(ans == "4") {
+        alert("Login Successful");
+        window.location.href = "dashboard.html";
+    } else {
+        alert("Wrong Security Answer");
+    }
+}
+</script>
 
 </body>
 </html>
