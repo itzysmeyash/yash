@@ -1,25 +1,23 @@
 body {
     margin: 0;
     font-family: Arial;
-    background: url('library.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-}
 
-.container {
-    text-align: center;
-    margin-top: 100px;
+    background-image: url('library.jpg');
+    background-size: cover;
 }
 
 .box {
-    background: rgba(0,0,0,0.7);
-    padding: 20px;
     width: 300px;
-    margin: auto;
+    margin: 100px auto;
+    padding: 20px;
+
+    background: rgba(0,0,0,0.8);
+    color: white;
+    text-align: center;
     border-radius: 10px;
 }
 
-input, select {
+input {
     width: 90%;
     padding: 10px;
     margin: 10px;
@@ -28,6 +26,7 @@ input, select {
 button {
     padding: 10px;
     margin: 5px;
+    width: 90%;
     background: green;
     color: white;
     border: none;
