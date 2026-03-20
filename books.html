@@ -6,24 +6,30 @@
 </head>
 <body>
 
-<div class="container">
-    <h1>Available Books</h1>
+<div class="box">
+    <h2>Book Management</h2>
 
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Status</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>DBMS</td>
-            <td>Author A</td>
-            <td>Available</td>
-        </tr>
-    </table>
+    <input type="text" placeholder="Book Name"><br>
+
+    <button onclick="addBook()">Add</button>
+    <button onclick="issueBook()">Issue</button>
+    <button onclick="returnBook()">Return</button>
+    <button onclick="deleteBook()">Delete</button>
+
+    <br><br>
+    <button onclick="back()">Back</button>
 </div>
+
+<script>
+function addBook(){ alert("Book Added"); }
+function issueBook(){ alert("Book Issued"); }
+function returnBook(){ alert("Book Returned"); }
+function deleteBook(){ alert("Book Deleted"); }
+
+function back(){
+    window.location.href="dashboard.html";
+}
+</script>
 
 </body>
 </html>
