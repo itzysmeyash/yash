@@ -3,35 +3,16 @@ body {
     padding: 0;
     font-family: Arial;
 
-    background-image: url('library.jpg'); /* Add your image */
+    background-image: url('library.jpg'); /* add your image */
     background-size: cover;
     background-position: center;
 }
 
-.login-box {
-    width: 300px;
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    background: rgba(0,0,0,0.7);
-    color: white;
+.container {
     text-align: center;
-    border-radius: 10px;
-}
-
-input {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-button {
-    padding: 10px 20px;
-    background: #00bcd4;
-    border: none;
+    margin-top: 200px;
+    background-color: rgba(0,0,0,0.6);
     color: white;
-    cursor: pointer;
-}
+    padding: 30px;
+    border-radius: 10px;
+}}
