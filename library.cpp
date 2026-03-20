@@ -29,7 +29,7 @@ public:
             issued = false;
             cout << "Book Returned\n";
         } else {
-            cout << "Not Issued\n";
+            cout << "Book was not issued\n";
         }
     }
 };
@@ -39,5 +39,4 @@ int main() {
     b.addBook();
     b.issueBook();
     b.returnBook();
-    return 0;
 }
